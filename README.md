@@ -7,7 +7,7 @@ Start many, finish more. You learn by doing and deploying.
 
 **Includes:**  
 - Websites & demos (hosted on Vercel)
-- Math projects (MCP focus)
+- Math project ,MCP focus
 - Code, notes, and roadmaps
 
 **How to use:**  
