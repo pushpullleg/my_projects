@@ -1,3 +1,58 @@
+## Deploying Your Project to Vercel with Authentication (Google/SSO) 🚀
+
+This guide will help you deploy your Next.js project to Vercel with authentication powered by Clerk. Follow the steps below to get your project live.
+
+### Prerequisites
+
+Before proceeding, ensure you have completed the following:
+
+- Logged into Vercel with GitHub.
+- Set up a Next.js project locally.
+- Installed Clerk and integrated it into `layout.tsx`.
+
+### Deployment Steps
+
+#### 1. Push Your Project to GitHub
+
+If your project is not already a Git repository, initialize it and push it to GitHub:
+
+```bash
+# Initialize a Git repository (if not already done)
+git init
+
+# Stage all files and commit
+git add . && git commit -m "initial commit"
+
+# Set the main branch
+git branch -M main
+
+# Add your GitHub repository as the remote origin
+git remote add origin <your-repo-url>
+
+# Push the code to GitHub
+git push -u origin main
+```
+
+#### 2. Deploy on Vercel
+
+1. Go to the [Vercel Dashboard](https://vercel.com/dashboard).
+2. Click **New Project** and import the GitHub repository you just pushed.
+3. Vercel will automatically detect that it’s a Next.js app.
+4. Click **Deploy** to deploy your project.
+
+#### 3. Add Environment Variables for Clerk
+
+To configure Clerk in your deployed project:
+
+1. In your Vercel project, go to **Settings** → **Environment Variables**.
+2. Add the following environment variables:
+    - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+    - `CLERK_SECRET_KEY`
+3. Redeploy your project to apply the changes.
+
+Your project is now live with authentication enabled! 🎉
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
