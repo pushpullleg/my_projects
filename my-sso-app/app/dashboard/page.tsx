@@ -1,16 +1,12 @@
-import { currentUser } from "@clerk/nextjs";
+"use client";  // 👈 important when using hooks in App Router
+import { useUser } from "@clerk/nextjs";
 
-export default async function DashboardPage() {
-  const user = await currentUser();
+export default function DashboardPage() {
+  const { user } = useUser();
 
   if (!user) {
-    return <div>You must be signed in to see this page.</div>;
+    return <div>Loading...</div>;
   }
 
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Welcome, {user.firstName || "User"}!</h1>
-      <p>You are signed in with {user.emailAddresses[0].emailAddress}</p>
-    </div>
-  );
+  return <div>Welcome, {user.firstName}!</div>;
 }
