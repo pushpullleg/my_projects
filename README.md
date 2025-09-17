@@ -15,3 +15,4 @@ Browse folders, try demos, fork or contribute.
 
 ---
 Push, finish, and visualize your progress!
+extension=mongodb.soextension=mongodb.so
