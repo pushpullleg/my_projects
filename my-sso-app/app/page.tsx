@@ -1,13 +1,21 @@
-import Image from "next/image";
+"use client";
+
+import { SignedIn, SignedOut, SignIn, UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Hello, Next.js!</h1>
-      <p> 🚀</p>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-        <h1 style={{ fontSize: "3rem", fontWeight: "bold" }}>Thanks for rearranging things, my love !</h1>
-      </div>
+    <main className="flex flex-col items-center justify-center min-h-screen gap-6">
+      <SignedOut>
+        <h1 className="text-2xl font-bold">Welcome! Please sign in 👇</h1>
+        <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
+      </SignedOut>
+
+      <SignedIn>
+        <h1 className="text-3xl font-bold text-center">
+          Thanks for rearranging things, my love! 💙
+        </h1>
+        <UserButton afterSignOutUrl="/" />
+      </SignedIn>
     </main>
-  )
+  );
 }
