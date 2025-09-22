@@ -2,6 +2,15 @@
 
 A collection of ideas, experiments, and finished work.
 
+
+**Ideas:**
+1. Maths tutoring
+2. Free Food service 
+3. Car pool 
+4. Selling stuffs
+5. Portfolio
+
+
 **Philosophy:**  
 Start many, finish more. You learn by doing and deploying.
 
@@ -16,3 +25,6 @@ Browse folders, try demos, fork or contribute.
 ---
 Push, finish, and visualize your progress!
 extension=mongodb.soextension=mongodb.so
+
+
+
