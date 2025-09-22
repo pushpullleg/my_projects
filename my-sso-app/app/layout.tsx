@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from '@vercel/analytics/next';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Wrap children inside ClerkProvider */}
-        <ClerkProvider>{children}</ClerkProvider>
+        {/* Wrap children inside ClerkProvider and Analytics */}
+        <ClerkProvider>
+          {children}
+          <Analytics />
+        </ClerkProvider>
       </body>
     </html>
   );
