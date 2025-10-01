@@ -9,6 +9,8 @@ A collection of ideas, experiments, and finished work.
 3. Car pool 
 4. Selling stuffs
 5. Portfolio
+6. FITTOBER
+7. RAG Based Chatbot
 
 
 **Philosophy:**  
